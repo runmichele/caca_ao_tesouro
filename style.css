@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#timer {
+    font-size: 1.2em;
+}
+
+#game {
+    text-align: center;
+    margin-top: 5em; /* Espaço para a barra de navegação */
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-gap: 5px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #bbb;
+}
+
+.found {
+    background-color: gold;
+}
+
+.cold {
+    background-color: lightblue;
+}
+
+.warm {
+    background-color: orange;
+}
+
+.hot {
+    background-color: red;
+}
