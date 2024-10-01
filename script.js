@@ -40,6 +40,20 @@ function checkCell(row, col, cell) {
             message.textContent = 'Está frio!';
         }
 
+        timeLeft -= 2;
+        if (timeLeft <= 0) {
+            timeLeft = 0;
+            clearInterval(timer);
+            message.textContent = 'O tempo acabou! Você perdeu!';
+        }
+
+        document.getElementById('timer').textContent = `Tempo: ${timeLeft}s`;
+    }
+
+    // Remove o evento de clique corretamente
+    cell.removeEventListener('click', checkCell);
+}
+
         // Reduzir o tempo em 2 segundos para cada clique incorreto
         timeLeft -= 2;
         if (timeLeft <= 0) {
